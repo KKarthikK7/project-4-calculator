@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-black min-h-screen flex items-center justify-center">
+    <div class="flex flex-col items-center gap-4 mt-12">
+        <div class="flex items-center justify-end gap-2 w-85">
+            <span id="error-icon" class="text-red-500 text-3xl opacity-0 transition-opacity duration-200">⚠️</span>
+            <h1 class="text-white text-4xl text-right">0</h1>
+        </div>
+        <hr class="w-90 border-gray-500">
+        <div class="grid grid-cols-6 grid-rows-4 h-59 w-90 font-extrabold gap-2">
+            <button class="bg-zinc-200 border-3 border-red-500 rounded-2xl col-span-2 active:scale-95 transition-transform duration-100 cursor-pointer" onclick="clearDisplay()">C</button>
+            <button class="bg-white border-2 border-sky-300 rounded-2xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">7</button>
+            <button class="bg-white border-2 border-sky-300 rounded-2xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">8</button>
+            <button class="bg-white border-2 border-sky-300 rounded-2xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">9</button>
+            <button class="bg-white border-2 border-sky-300 rounded-2xl text-3xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">+</button>
+
+            <button class="bg-white border-2 border-sky-300 rounded-2xl col-start-3 active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">4</button>
+            <button class="bg-white border-2 border-sky-300 rounded-2xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">5</button>
+            <button class="bg-white border-2 border-sky-300 rounded-2xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">6</button>
+            <button class="bg-white border-2 border-sky-300 rounded-2xl text-4xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">-</button>
+
+            <button class="bg-white border-2 border-sky-300 rounded-2xl col-start-3 active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">1</button>
+            <button class="bg-white border-2 border-sky-300 rounded-2xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">2</button>
+            <button class="bg-white border-2 border-sky-300 rounded-2xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">3</button>
+            <button class="bg-white border-2 border-sky-300 rounded-2xl text-2xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">x</button>
+
+            <button class="bg-white border-2 border-sky-300 rounded-2xl col-start-3 text-2xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">/</button>
+            <button class="bg-white border-2 border-sky-300 rounded-2xl text-2xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">%</button>
+            <button class="bg-white border-2 border-sky-300 rounded-2xl text-2xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">.</button>
+            <button class="bg-green-400 border-3 border-blue-300 rounded-2xl text-2xl active:scale-95 transition-transform duration-100 cursor-pointer" onclick="button_display_change(event)">=</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
