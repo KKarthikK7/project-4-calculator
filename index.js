@@ -3,7 +3,7 @@ const errorIcon = document.getElementById("error-icon");
 let current = "";
 
 // symbols the calculator accepts
-const validKeys = "0123456789+-x/%.=";
+const validKeys = "0123456789+-x/.=";
 
 const showError = () => {
     errorIcon.classList.remove("opacity-0");
@@ -13,7 +13,7 @@ const showError = () => {
 const press = (value) => {
     if (value === "=") {
         try {
-            const expression = current.replace(/x/g, "*").replace(/%/g, "/100*");
+            const expression = current.replace(/x/g, "*");
             const result = eval(expression);
             if (result === undefined || Number.isNaN(result)) throw new Error();
             current = String(result);
